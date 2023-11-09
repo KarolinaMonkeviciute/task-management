@@ -4,6 +4,15 @@ const kanban = new Todo(
     '#kanban',
     ['Backlog','Todo', 'In Progress', 'Done']);
 
+    const addTaskBtnDOM = document.getElementById('add_task');
+    const asideDOM = document.getElementById('aside');
+
+    if (addTaskBtnDOM && asideDOM) {
+        addTaskBtnDOM.addEventListener('click', () => {
+            asideDOM.classList.add('show')
+    })
+    }
+
     kanban.addTask({
         columnIndex: 0,
         title: 'First task',
